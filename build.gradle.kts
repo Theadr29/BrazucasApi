@@ -8,7 +8,9 @@ plugins {
     id("io.ktor.plugin") version "2.3.4"
     id("org.jetbrains.kotlin.plugin.serialization") version "1.9.10"
 }
-
+tasks.create("stage") {
+    dependsOn("installDist")
+}
 group = "com.AdrianoDev"
 version = "0.0.1"
 
